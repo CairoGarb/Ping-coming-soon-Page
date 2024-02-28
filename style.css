@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* Primary */
+    --Blue: #4f7df3;
+    /* Secondary */
+    --Pale-Blue: #c2d3ff;
+    --Light-Red: #ff5263;
+    /*  Neutral */
+    --Gray: #969696;
+    --Very-Dark-Blue: #151f29;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Libre Franklin", sans-serif;
+}
+
+figure, img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 1440px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    margin: auto;
+    text-align: center;
+    padding-top: 2rem;
+    width: 600px;
+}
+.logo {
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.launch-text {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+.launch-text h1 {
+    color: var(--Gray);
+    font-weight: 300;
+    padding-bottom: .4rem;
+}
+.launch-text h1 span {
+    color: var(--Very-Dark-Blue);
+    font-weight: 600;
+}
+.launch-text p {
+    color: var(--Very-Dark-Blue);
+    font-size: 14px;
+}
+#form {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.input-control input {
+    width: 400px;
+    padding: 1rem;
+    border-radius: 30px;
+    border: 1px solid var(--Pale-Blue);
+    margin-bottom: 5px;
+}
+.error-msg {
+    color: var(--Light-Red);
+    font-size: 11px;
+    text-align: start;
+    padding-left: 1.5rem;
+    font-style: italic;
+    visibility: hidden;
+}
+.input-control.error input {
+    border: 2px solid var(--Light-Red);
+}
+.input-control.error .error-msg {
+    visibility: visible;
+}
+.input-control.success input {
+    border: 2px solid #6eeb9a;
+}
+#btn {
+    width: 190px;
+    height: 50px;
+    background-color: var(--Blue);
+    border: none;
+    color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 4px 5px #4f7df36d;
+}
+#btn:hover {
+    background-color: #83a2ef;
+    box-shadow: 0 4px 5px #7e9ff36d;
+    cursor: pointer;
+    transition: .2s;
+    scale: 1.01;
+}
+
+.img {
+    padding-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1rem;
+}
+
+.sm-icons i {
+    color: var(--Blue);
+    scale: .8;
+    width: 40px;
+    text-align: center;
+    border: 1px solid var(--Pale-Blue);
+    border-radius: 50%;
+    padding: 10px;
+}
+.sm-icons i:hover {
+    color: #fff;
+    background-color: var(--Blue);
+    cursor: pointer;
+    transition: .5s;
+}
+
+footer {
+    text-align: center;
+}
+footer span {
+    font-size: 12px;
+    color: var(--Gray);
+}
+
+/* Responsiveness */
+/* Smaller Laptops */
+@media screen and (min-width: 901px) and (max-width: 1439px) {
+    body {
+        min-width: 901px;
+        max-width: 1439px;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    body {
+        min-width: 601px;
+        max-width: 900px;
+    }
+}
+
+/* Mobiles and smaller Tablets */
+@media screen and (max-width: 600px) {
+    body {
+        min-width: 300px;
+        max-width: 600px;
+    }
+    .container {
+        width: 350px;
+    }
+    .logo {
+        width: 20%;
+    }
+    .launch-text h1 {
+        font-size: 28px;
+    }
+    #form {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 3rem;
+    }
+    .input-control input {
+        width: 350px;
+    }
+    .input-control .error-msg {
+        padding-bottom: 5px;
+    }
+    #btn {
+        width: auto;
+    }
+    .img {
+        padding-bottom: 5rem;
+    }
+}
+@media screen and (max-width:361px) {
+    body {
+        min-width: 322px;
+        max-width: 361px;
+    }
+    .container {
+        width: 320px;
+    }
+    .input-control input {
+        width: 320px;
+    }
+}
+@media screen and (max-width:321px) {
+    body {
+        min-width: 300px;
+        max-width: 321px;
+    }
+    .container {
+        width: 280px;
+    }
+    .input-control input {
+        width: 280px;
+    }
+}
